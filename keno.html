@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лабораторная работа 4</title>
+
+<script>
+function maxval(obj) {
+var a = Number(obj.num1.value);
+var b = Number(obj.num2.value);
+var c = Number(obj.num3.value);
+var d = Number(obj.num4.value);
+var f = Number(obj.num5.value);
+var m = a
+if (b > m) m = b
+if (c > m) m = c
+if (d > m) m = d
+if (f > m) m = f
+obj.res.value = m
+}
+</script>
+
+<script>
+function maxstoroni(obj) {
+let a = prompt('Введите 1 сторону', '');
+let b = prompt('Введите 2 сторону', '');
+let c = prompt('Введите 3 сторону', '');
+a=Number(a)
+b=Number(b)
+c=Number(c)
+if (((a + b) > c) && ((b + c) > a) && ((c + a) > b)){
+obj.res.value = "может"}
+else {
+obj.res.value = "не может"
+}
+
+}
+</script>
+</head>
+<BODY>
+<H4>Вычисление максимального значения</H4>
+<FORM name="form1">
+Число 1: <input type="text" size=8 name="num1"><hr>
+Число 2: <input type="text" size=8 name="num2"><hr>
+Число 3: <input type="text" size=8 name="num3"><hr>
+Число 4: <input type="text" size=8 name="num4"><hr>
+Число 5: <input type="text" size=8 name="num5"><hr>
+Максимальное значение равно
+<input type="button" value=Определить onClick="maxval(form1)">
+<input type="text" size=8 name="res"><hr>
+<input type="reset">
+</FORM>
+<hr>
+<h4>Определение может ли существовать треугольник при заданных длиннах сторон.</h4>
+<form name="form2">
+Может ли треугольник существовать?
+<input type="button" value=Определить onClick="maxstoroni(form2)">
+<input type="text" size=8 name="res"><hr>
+<input type="reset">
+</form>
+<hr>
+</BODY>
+</html>
+Не выбран ни один файл
+Еще
+
+
+
